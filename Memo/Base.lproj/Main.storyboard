@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,11 +133,64 @@
                             <outlet property="delegate" destination="vAy-hI-LAe" id="cbN-3r-06F"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="목록" id="Fkd-8Q-4xV"/>
+                    <navigationItem key="navigationItem" title="목록" id="Fkd-8Q-4xV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E1r-Ju-Dh3">
+                            <connections>
+                                <segue destination="laU-yp-lXo" kind="show" id="R13-zi-v9S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYy-ev-Fxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="682.60869565217399" y="50.892857142857139"/>
+        </scene>
+        <!--메모 작성-->
+        <scene sceneID="wRh-Dr-NFA">
+            <objects>
+                <viewController id="laU-yp-lXo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MP1-v7-Cat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-1n-7fQ">
+                                <rect key="frame" x="16" y="108" width="382" height="250"/>
+                                <color key="backgroundColor" red="0.91502899484536082" green="0.91502899484536082" blue="0.91502899484536082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="hrK-Dz-wC0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-od-rQO">
+                                <rect key="frame" x="16" y="373" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="m6f-C4-QCH"/>
+                                    <constraint firstAttribute="width" constant="250" id="t6Q-gQ-5rq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPQ-EM-kkW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FFI-od-rQO" firstAttribute="top" secondItem="4KD-1n-7fQ" secondAttribute="bottom" constant="15" id="Gbg-0z-Rkv"/>
+                            <constraint firstItem="4KD-1n-7fQ" firstAttribute="top" secondItem="uPQ-EM-kkW" secondAttribute="top" constant="20" id="ODJ-4U-R9A"/>
+                            <constraint firstItem="uPQ-EM-kkW" firstAttribute="trailing" secondItem="4KD-1n-7fQ" secondAttribute="trailing" constant="16" id="WeE-jQ-Prv"/>
+                            <constraint firstItem="FFI-od-rQO" firstAttribute="leading" secondItem="uPQ-EM-kkW" secondAttribute="leading" constant="16" id="cOW-8y-vfp"/>
+                            <constraint firstItem="4KD-1n-7fQ" firstAttribute="leading" secondItem="uPQ-EM-kkW" secondAttribute="leading" constant="16" id="yJw-EO-tCs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="메모 작성" id="OVV-78-EHt">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="avh-hN-xX9"/>
+                            <barButtonItem title="저장" id="we8-ut-524"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vl-cg-axS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540.5797101449277" y="50.892857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zws-Sn-KE6">
@@ -156,6 +210,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
