@@ -140,6 +140,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="pB4-Zf-goB" kind="show" identifier="read_sg" id="dAw-tc-DgK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYy-ev-Fxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +194,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vl-cg-axS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540.5797101449277" y="50.892857142857139"/>
+        </scene>
+        <!--상세 화면-->
+        <scene sceneID="WT4-nU-ppu">
+            <objects>
+                <viewController title="상세 화면" id="pB4-Zf-goB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="POa-Tr-Wd8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-HA-kmP">
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QA0-Cq-XWH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFU-Bq-gt9">
+                                <rect key="frame" x="16" y="145" width="382" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQM-O5-DNc">
+                                <rect key="frame" x="16" y="181" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1tX-Ug-Ddc"/>
+                                    <constraint firstAttribute="width" constant="250" id="NHs-UU-IsQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ej7-0C-pGI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aQM-O5-DNc" firstAttribute="leading" secondItem="ej7-0C-pGI" secondAttribute="leading" constant="16" id="fP9-39-9xG"/>
+                            <constraint firstItem="ej7-0C-pGI" firstAttribute="trailing" secondItem="9Tm-HA-kmP" secondAttribute="trailing" constant="16" id="gOY-Mt-daa"/>
+                            <constraint firstItem="9Tm-HA-kmP" firstAttribute="top" secondItem="ej7-0C-pGI" secondAttribute="top" constant="16" id="gqB-zv-LLS"/>
+                            <constraint firstItem="ej7-0C-pGI" firstAttribute="trailing" secondItem="lFU-Bq-gt9" secondAttribute="trailing" constant="16" id="kfr-b5-62d"/>
+                            <constraint firstItem="aQM-O5-DNc" firstAttribute="top" secondItem="lFU-Bq-gt9" secondAttribute="bottom" constant="20" placeholder="YES" id="mxV-J0-n4F"/>
+                            <constraint firstItem="lFU-Bq-gt9" firstAttribute="leading" secondItem="ej7-0C-pGI" secondAttribute="leading" constant="16" id="ogs-7U-UHR"/>
+                            <constraint firstItem="9Tm-HA-kmP" firstAttribute="leading" secondItem="ej7-0C-pGI" secondAttribute="leading" constant="16" id="sbb-zi-GNQ"/>
+                            <constraint firstItem="lFU-Bq-gt9" firstAttribute="top" secondItem="9Tm-HA-kmP" secondAttribute="bottom" constant="20" id="zzl-ch-SOc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="QHH-YD-6Rb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vG-kO-Og8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540.5797101449277" y="780.80357142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zws-Sn-KE6">
