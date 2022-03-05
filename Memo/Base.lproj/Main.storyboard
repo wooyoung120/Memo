@@ -186,10 +186,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="OVV-78-EHt">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="avh-hN-xX9"/>
-                            <barButtonItem title="저장" id="we8-ut-524"/>
+                            <barButtonItem systemItem="camera" id="avh-hN-xX9">
+                                <connections>
+                                    <action selector="pick:" destination="laU-yp-lXo" id="KNq-Yv-gJS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="we8-ut-524">
+                                <connections>
+                                    <action selector="save:" destination="laU-yp-lXo" id="mMw-0y-qcP"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="4KD-1n-7fQ" id="8ZB-8q-uTm"/>
+                        <outlet property="preview" destination="FFI-od-rQO" id="vxL-jJ-hZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vl-cg-axS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
