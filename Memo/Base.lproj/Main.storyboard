@@ -39,9 +39,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1970-01-01 19:24:31" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co5-Gg-dLb" userLabel="날짜">
-                                            <rect key="frame" x="312.33333333333331" y="21" width="65" height="38"/>
+                                            <rect key="frame" x="307.33333333333331" y="21" width="70" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="lYi-yL-sLc"/>
+                                                <constraint firstAttribute="width" constant="70" id="lYi-yL-sLc"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
@@ -89,9 +89,9 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1970-01-01 19:24:31" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olv-HT-AOP">
-                                            <rect key="frame" x="312.33333333333331" y="21" width="65" height="38"/>
+                                            <rect key="frame" x="307.33333333333331" y="21" width="70" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="0LO-PV-IEP"/>
+                                                <constraint firstAttribute="width" constant="70" id="0LO-PV-IEP"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
