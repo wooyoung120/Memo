@@ -12,9 +12,9 @@ class MemoReadVC: UIViewController {
     // 콘텐츠 데이터를 저장하는 변수
     var param: MemoData?
     
-    @IBOutlet weak var subject: UILabel!
-    @IBOutlet weak var contents: UILabel!
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet var subject: UILabel!
+    @IBOutlet var contents: UILabel!
+    @IBOutlet var img: UIImageView!
     
     override func viewDidLoad() {
         self.subject.text = param?.title

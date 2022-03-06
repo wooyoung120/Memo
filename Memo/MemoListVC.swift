@@ -24,17 +24,19 @@ class MemoListVC: UITableViewController {
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
         
         // 재사용 큐로부터 프로토타입 셀의 인스턴스를 전달받음
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
-        
-        cell.subject?.text = row.title
-        cell.contents?.text = row.contents
-        cell.img?.image = row.image
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        cell.regdate?.text = formatter.string(from: row.regdate!)
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MemoCell {
+            cell.subject.text = row.title
+            cell.contents.text = row.contents
+            cell.img?.image = row.image
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            cell.regdate.text = formatter.string(from: row.regdate!)
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
